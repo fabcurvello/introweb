@@ -35,8 +35,8 @@ img {
     /* position static: top, left, right e bottom não funcionam */
     position: static;
 
-    top: 100px;
-    left: 100px;
+    top: 100px; /* não funciona */
+    left: 100px; /* não funciona */
 
 }
 
@@ -63,6 +63,7 @@ img {
 /* absolute: a posição do elemento é relativa ao seu elemento pai mais próximo que tenha position diferente de static */
 #img2 {
     position: absolute;
+
     top: 50px;
     left: 50px;
 }
@@ -97,3 +98,30 @@ Mesmo rolando a página:
 * botão “Voltar ao topo”
 * chat online
 */
+
+
+/* -----------
+ Z-INDEX
+ ----------- */
+
+ /* vamos testar este recurso com os blocos 1 e 2.
+ Faça estas alterações */
+
+#bloco1{
+    position:relative;
+}
+
+#bloco2{
+    position:relative;
+    top:-120px;
+    left:120px;
+}
+
+/* agora insira o z-index no bloco 1, com valor 2 e no bloco 2, com valor 1 */
+#bloco1{
+    z-index: 2;
+}
+
+#bloco2{
+    z-index: 1;
+}

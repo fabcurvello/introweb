@@ -1,0 +1,13 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav ul li {
+    /* display: block; */
+    display: inline-block;
+
+    margin-right: 16px;
+}

@@ -11,7 +11,8 @@ body {
 }
 
 #geral {
-    width: 900px;
+    width: 650px;
+    height: 2500px;
     margin: 30px auto;
     background-color: cadetblue;
 }
@@ -26,4 +27,77 @@ body {
 img {
     width: 200px;
     border: 3px solid red;
+}
+
+/* Entendendo POSITION */
+
+/* fone de ouvido */
+/* position static */
+#img1 {
+    position: static; /* ignora parâmetros de movimentação */
+    top: 100px; /* não funciona */
+    left: 100px; /* não funciona */
+}
+
+/* mouse */
+/* position relative - a posição do elemento é relativa à sua posição normal. */
+/* obs: o espaço original ocupado continua ocupado mesmo após a movimentação. */
+#img3 {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/* position absolute */
+
+/* elemento pai -> bloco1 */
+#bloco1 {
+    position: relative;
+}
+
+/* elemento filho -> img2 */
+/* absolute - a posição do elemento é relativa ao seu elemento pai mais próximo que tenha position diferente de static */
+/* obs: o espaço original ocupado fica livre após a movimentação. */
+/* bola */
+#img2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+}
+
+/* position fixed */
+/* mochila */
+#img4{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+/*
+--------------------------
+Z-INDEX
+--------------------------
+*/
+
+/* vamos testar o z-index com os blocos 1 e 2 */
+
+#bloco1{
+    position: relative;
+}
+
+#bloco2{
+    position: relative;
+    top: -120px;
+    left: 120px;
+}
+
+/* agora sim, vamos conhecer o z-idex */
+
+#bloco1 {
+    z-index: 2;
+}
+
+#bloco2 {
+    z-index: 1;
 }

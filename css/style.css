@@ -9,15 +9,43 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  color: #333;
+  /* color: #333; */
 }
 
-/* Cabeçalho */
+/* Cabeçalho - fixo*/
 .header {
   background-color: #1e90ff;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Menu com Flexbox */
+.nav-menu ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 100px;
 }
 
 /* Banner */
@@ -26,20 +54,32 @@ body {
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
+  text-align: center;
 }
 
 /* Seção de produtos */
 .products {
-  margin: 20px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+} 
 
 /* Cards de produto */
 .product-card {
   background-color: white;
   border: 1px solid #ddd;
   padding: 15px;
-  margin-bottom: 15px;
+  width: 250px;
   border-radius: 5px;
+  text-align: center;
+}
+
+/* Hover nos produtos */
+.product-card:hover {
+  transform: scale(1.02);
+  border-color: #1e90ff;
 }
 
 /* Títulos */

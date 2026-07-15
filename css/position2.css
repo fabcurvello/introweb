@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: darkkhaki;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2500px;
+}
+
+#geral {
+    width: 650px;
+    margin: 30px auto;
+    background-color: cadetblue;
+}
+
+#bloco1, #bloco2 {
+    border: 3px solid black;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+img {
+    width: 200px;
+    border: 3px solid red;
+}
+
+/* EXEMPLO 1 - POSITION STATIC */
+
+#img1 {
+    /* position static: top, left, right e bottom não funcionam */
+    position: static;
+
+    top: 100px; /* não funciona */
+    left: 100px; /* não funciona */
+
+}
+
+/* EXEMPLO 2 - POSITION RELATIVE */
+
+#img3 {
+    /* position relative: top, left, right e bottom funcionam */
+    /* relative: a posição do elemento é relativa à sua posição normal */
+    position: relative;
+
+    top: 100px;
+    left: 100px;
+}
+
+
+/* EXEMPLO 3 - POSITION ABSOLUTE */
+
+/* elemento pai */
+#bloco1 {
+    position: relative;
+}
+
+/* elemento filho */
+/* absolute: a posição do elemento é relativa ao seu elemento pai mais próximo que tenha position diferente de static */
+#img2 {
+    position: absolute;
+
+    top: 50px;
+    left: 50px;
+}
+
+/*
+Explique: A imagem:
+
+* sai completamente do fluxo da página;
+* deixa de ocupar espaço;
+* é posicionada em relação ao primeiro ancestral com position.
+*/
+
+/* EXEMPLO 4 - POSITION FIXED */
+
+#img4 {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+/*Explique:
+
+Agora ela fica presa na janela do navegador.
+
+Mesmo rolando a página:
+
+* ela permanece ali.
+
+É exatamente o comportamento de:
+
+* botão WhatsApp
+* botão “Voltar ao topo”
+* chat online
+*/
+
+
+/* -----------
+ Z-INDEX
+ ----------- */
+
+ /* vamos testar este recurso com os blocos 1 e 2.
+ Faça estas alterações */
+
+#bloco1{
+    position:relative;
+}
+
+#bloco2{
+    position:relative;
+    top:-120px;
+    left:120px;
+}
+
+/* agora insira o z-index no bloco 1, com valor 2 e no bloco 2, com valor 1 */
+#bloco1{
+    z-index: 2;
+}
+
+#bloco2{
+    z-index: 1;
+}

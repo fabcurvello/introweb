@@ -37,6 +37,7 @@ body {
 /* ESCREVA SEU CÓDIGO GRID E RESPONSIVO ABAIXO */
 /* ========================================== */
 
+/* resolução padrão celular */
 .container-produtos {
 
     display: grid;

@@ -2,6 +2,10 @@
 
 > Repositório didático: exemplos e exercícios de HTML, CSS e JavaScript desenvolvidos em sala de aula.
 
+## Acesse online
+
+Site publicado no GitHub Pages: **[https://fabcurvello.github.io/introweb/](https://fabcurvello.github.io/introweb/)**
+
 ## Sobre o projeto
 
 Coleção dos exemplos e exercícios das aulas de introdução ao desenvolvimento web, do primeiro "Olá, mundo" em HTML até manipulação do DOM com JavaScript. A página principal (`index.html`) é uma loja virtual de exemplo, com carrinho de compras que guarda os itens no `localStorage`.
